@@ -2,9 +2,13 @@
 
 A power button for the [DeepSeek Harness](https://github.com/deepseek-ai) Web UI: one click in the conversation header opens a small dialog offering **Restart DSH** or **Quit DSH** — and each of those asks for confirmation again before anything happens.
 
-![screenshot](docs/screenshot.png)
+**[中文说明 →](README.zh-CN.md)**
 
-> Screenshot placeholder — drop a PNG at `docs/screenshot.png` and this renders.
+![Header power button](docs/screenshot-header.png)
+
+The two-step flow — pick an action, then confirm it:
+
+![Restart or quit, each behind a confirmation](docs/screenshot.png)
 
 ---
 
