@@ -1,0 +1,55 @@
+{
+  "name": "dsh-powerbox",
+  "version": "1.0.0",
+  "description": "Power actions for the DSH Web UI: a header button that restarts or quits DSH, each behind its own confirmation dialog.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "power",
+    "restart",
+    "quit"
+  ],
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "check": "node --check lib/index.js && node --check lib/client.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AsterLuo/dsh-powerbox"
+  },
+  "bugs": {
+    "url": "https://github.com/AsterLuo/dsh-powerbox/issues"
+  },
+  "homepage": "https://github.com/AsterLuo/dsh-powerbox#readme",
+  "license": "MIT",
+  "author": "AsterLuo",
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}

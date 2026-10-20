@@ -1,0 +1,13 @@
+# dsh-powerbox bundle patch
+#
+# Installing through the official CLI
+#
+#   dsh plugin --profile <name> add github:AsterLuo/dsh-powerbox
+#
+# makes the CLI reconcile dsh.profile.bundles against installed packages;
+# seeing this declaration it appends `dsh-powerbox` to the bundle stack, and the
+# profile boot merges this patch (a single insert of the plugin row). No manual
+# profile file edits are needed, and your own cordis.patch.yml stays untouched.
+- insert:
+    - id: powerbox
+      name: 'dsh-powerbox'
